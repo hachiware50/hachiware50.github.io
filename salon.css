@@ -1,0 +1,500 @@
+/* ===== リセット・基本設定 ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --salon-black: #0A0A0A;
+    --salon-dark: #141414;
+    --salon-dark2: #1C1C1C;
+    --salon-gold: #C9A96E;
+    --salon-gold-light: #E8C99A;
+    --salon-white: #F5F5F0;
+    --salon-text: #D0D0C8;
+    --salon-text-muted: #808078;
+    --salon-border: rgba(201,169,110,0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--salon-black);
+    color: var(--salon-text);
+    line-height: 1.8;
+}
+
+/* ===== ナビゲーション ===== */
+.salon-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--salon-border);
+}
+
+.salon-nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.salon-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--salon-gold);
+    letter-spacing: 0.3em;
+}
+
+.salon-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.salon-nav-links a {
+    color: var(--salon-text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.salon-nav-links a:hover {
+    color: var(--salon-gold);
+}
+
+.salon-nav-btn {
+    border: 1px solid var(--salon-gold) !important;
+    color: var(--salon-gold) !important;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s !important;
+}
+
+.salon-nav-btn:hover {
+    background: var(--salon-gold) !important;
+    color: var(--salon-black) !important;
+}
+
+/* ===== ヒーロー ===== */
+.salon-hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0A0A0A 0%, #1a1a1a 50%, #0f0f0f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.salon-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,169,110,0.08) 0%, transparent 70%);
+}
+
+.salon-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.salon-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.salon-hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5em;
+    color: var(--salon-gold);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.salon-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--salon-white);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+}
+
+.salon-hero-desc {
+    color: var(--salon-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+    line-height: 2;
+    letter-spacing: 0.05em;
+}
+
+.salon-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 1px solid var(--salon-gold);
+    color: var(--salon-gold);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.salon-btn:hover {
+    background: var(--salon-gold);
+    color: var(--salon-black);
+}
+
+/* ===== セクション共通 ===== */
+.salon-section {
+    padding: 7rem 2rem;
+}
+
+.salon-section-dark {
+    background: var(--salon-dark);
+}
+
+.salon-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.salon-section-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    color: var(--salon-gold);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.salon-section-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 300;
+    color: var(--salon-white);
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.1em;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ===== コンセプト ===== */
+.salon-concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.salon-concept-text h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 300;
+    color: var(--salon-white);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+.salon-concept-text p {
+    color: var(--salon-text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+}
+
+.salon-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--salon-border);
+}
+
+.salon-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.88rem;
+    color: var(--salon-text);
+}
+
+.salon-feature-icon {
+    color: var(--salon-gold);
+    font-size: 0.7rem;
+}
+
+.salon-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, #1C1C1C, #2A2A2A);
+    border: 1px solid var(--salon-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+}
+
+/* ===== メニュー ===== */
+.salon-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.salon-menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--salon-border);
+    gap: 2rem;
+    transition: background 0.3s;
+}
+
+.salon-menu-item:first-child {
+    border-top: 1px solid var(--salon-border);
+}
+
+.salon-menu-left h3 {
+    font-size: 1rem;
+    color: var(--salon-white);
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.salon-menu-left p {
+    font-size: 0.85rem;
+    color: var(--salon-text-muted);
+}
+
+.salon-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--salon-gold);
+    white-space: nowrap;
+}
+
+/* ===== スタッフ ===== */
+.salon-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.salon-staff-card {
+    border: 1px solid var(--salon-border);
+    padding: 2rem;
+    transition: border-color 0.3s;
+}
+
+.salon-staff-card:hover {
+    border-color: var(--salon-gold);
+}
+
+.salon-staff-img {
+    width: 100px;
+    height: 100px;
+    background: var(--salon-dark2);
+    border: 1px solid var(--salon-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.salon-staff-role {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--salon-gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.salon-staff-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--salon-white);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.salon-staff-info p {
+    font-size: 0.85rem;
+    color: var(--salon-text-muted);
+    line-height: 1.8;
+}
+
+/* ===== 予約 ===== */
+.salon-reserve-desc {
+    text-align: center;
+    color: var(--salon-text-muted);
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+.salon-reserve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.salon-reserve-card {
+    border: 1px solid var(--salon-border);
+    padding: 2.5rem;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.salon-reserve-card:hover {
+    border-color: var(--salon-gold);
+}
+
+.salon-reserve-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.salon-reserve-card h3 {
+    color: var(--salon-white);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.salon-reserve-card p {
+    color: var(--salon-text-muted);
+    font-size: 0.88rem;
+}
+
+.salon-tel {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem !important;
+    color: var(--salon-gold) !important;
+    letter-spacing: 0.1em;
+    margin: 0.5rem 0 !important;
+}
+
+.salon-tel-hours {
+    font-size: 0.8rem !important;
+}
+
+/* ===== アクセス ===== */
+.salon-access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.salon-access-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.salon-info-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--salon-border);
+    font-size: 0.88rem;
+}
+
+.salon-info-item:first-child {
+    border-top: 1px solid var(--salon-border);
+}
+
+.salon-info-label {
+    color: var(--salon-gold);
+    letter-spacing: 0.05em;
+}
+
+.salon-map-placeholder {
+    background: var(--salon-dark2);
+    border: 1px solid var(--salon-border);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--salon-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===== フッター ===== */
+.salon-footer {
+    background: var(--salon-dark);
+    border-top: 1px solid var(--salon-border);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.salon-footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--salon-gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+}
+
+.salon-footer-copy {
+    color: var(--salon-text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.salon-footer-credit {
+    color: var(--salon-gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+    .salon-nav-links {
+        display: none;
+    }
+
+    .salon-concept-grid,
+    .salon-access-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .salon-menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
