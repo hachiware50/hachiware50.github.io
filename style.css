@@ -102,7 +102,7 @@ a {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.12fr 0.88fr;
   gap: 40px;
   align-items: center;
 }
@@ -121,7 +121,7 @@ a {
 
 .hero h1 {
   margin: 0 0 18px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 4vw, 3.1rem);
   line-height: 1.35;
   letter-spacing: 0.01em;
 }
@@ -183,7 +183,7 @@ a {
 }
 
 .hero-card {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(231, 223, 215, 0.8);
   border-radius: 28px;
   padding: 28px;
@@ -372,6 +372,10 @@ a {
   color: var(--subtext);
 }
 
+.sample-body strong {
+  color: var(--text);
+}
+
 .sample-meta {
   font-size: 0.92rem;
   color: var(--primary-dark) !important;
@@ -394,10 +398,23 @@ a {
 }
 
 .price {
-  margin: 0;
+  margin: 0 0 8px;
   font-size: 1.15rem;
   font-weight: 800;
   color: var(--primary-dark);
+}
+
+.price-note {
+  margin: 0;
+  color: var(--subtext);
+  font-size: 0.92rem;
+}
+
+.pricing-caption {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--subtext);
+  font-size: 0.95rem;
 }
 
 /* flow */
@@ -508,6 +525,7 @@ a {
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
+  margin-bottom: 18px;
 }
 
 .contact-button {
@@ -536,6 +554,12 @@ a {
   border-color: var(--primary);
   color: var(--primary-dark);
   background: #fff;
+}
+
+.contact-note {
+  text-align: center;
+  color: var(--subtext);
+  margin: 0;
 }
 
 /* footer */
@@ -611,4 +635,3 @@ a {
     font-size: 3rem;
   }
 }
-
